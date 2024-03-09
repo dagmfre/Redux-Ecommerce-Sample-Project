@@ -1,4 +1,5 @@
-import Products from "./Products";
+import Products from "./Products"
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -10,7 +11,10 @@ export default function Home() {
             <p>Products</p>
           </div>
           <div>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <Link to="/cart">
+              {" "}
+              <i class="fa-solid fa-cart-shopping"></i>
+            </Link>
             <p>1</p>
           </div>
         </div>
