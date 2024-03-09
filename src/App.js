@@ -1,19 +1,21 @@
 import { increment, decrement, addByNumber, login } from "./counterSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Home from "./Components/Home";
 
 const App = () => {
   const dispatch = useDispatch();
-  const counterValue = useSelector(state => state.counter.value);
-  const isLoggedIn = useSelector(state => state.counter.isLogged)
+  const counterValue = useSelector((state) => state.counter.value);
+  const isLoggedIn = useSelector((state) => state.counter.isLogged);
 
-  return (  
+  return (
     <div className="App">
-      <h1>Counter: {counterValue}</h1>
+      <Home />
+      {/* <h1>Counter: {counterValue}</h1>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
       <button onClick={() => dispatch(addByNumber(10))}>Add By 10</button>
       <button onClick={() => dispatch(login())}>Sign In</button>
-      <p>{isLoggedIn ? "Secret" : ""}</p>
+      <p>{isLoggedIn ? "Secret" : ""}</p> */}
     </div>
   );
 };
