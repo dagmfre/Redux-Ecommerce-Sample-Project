@@ -1,12 +1,11 @@
-import { increment, decrement, addByNumber, login } from "./counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Home from "./Components/Home";
+import cartSlice from "./Components/cartSlice";
 
 const App = () => {
   const dispatch = useDispatch();
   const counterValue = useSelector((state) => state.counter.value);
   const isLoggedIn = useSelector((state) => state.counter.isLogged);
-
   return (
     <div className="App">
       <Home />

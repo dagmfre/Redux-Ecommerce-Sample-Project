@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #8080802e;
-    padding: 0 8rem 0 3rem;
+    padding: 0 3rem;
 }
 .product-card{
     border: 1px solid #0000003b;
