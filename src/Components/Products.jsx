@@ -21,11 +21,11 @@ export default function Products() {
       {products.map((product) => (
         <div key={product.id} className="product-card">
           <img src={product.image} alt="" />
+          <h1>{product.title}</h1>
           <div>
-            <h1>{product.title}</h1>
+            <button>Add To Cart</button>
             <p>{product.price}$</p>
           </div>
-          <button>Add To Cart</button>
         </div>
       ))}
     </div>

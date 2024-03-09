@@ -5,8 +5,14 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #8080802e;
-    padding: 0 1rem;
+    padding: 0 8rem 0 3rem;
 }
+.product-card{
+    border: 1px solid #0000003b;
+    padding: 2rem;
+    border-radius: 7px;
+}
+
 .navbar >:nth-child(1) {
     display: flex;
     align-items: center;
@@ -44,7 +50,24 @@ body {
 .product-card div {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
-.product-card div h1 {
+.product-card div p {
+    background-color: #7777c7;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+}
+.product-card h1 {
     font-size: 1.2rem;
 }
+button {
+    padding: 10px 3rem;
+    background-color: #8080806b;
+    border: 1px solid #00000063;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
