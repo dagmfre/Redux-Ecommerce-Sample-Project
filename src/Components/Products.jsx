@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, clearCart } from "./cartSlice";
+import { useDispatch } from "react-redux";
+import { addToCart, increment } from "./cartSlice";
 
 export default function Products() {
   const dispatch = useDispatch();
@@ -12,10 +12,8 @@ export default function Products() {
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
         setProducts(response.data);
-        console.log("response");
       } catch (error) {
         console.log(error);
-        console.log("errrrrrrrrrr");
       }
     };
 
@@ -24,6 +22,7 @@ export default function Products() {
 
   const handleClick = (item) => {
     dispatch(addToCart(item));
+    dispatch(increment());
   };
 
   return (

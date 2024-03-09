@@ -1,7 +1,10 @@
-import Products from "./Products"
+import Products from "./Products";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const total = useSelector((state) => state.cart.total);
+
   return (
     <div className="home">
       <div className="home-cont">
@@ -15,7 +18,7 @@ export default function Home() {
               {" "}
               <i class="fa-solid fa-cart-shopping"></i>
             </Link>
-            <p>1</p>
+            <p>{total}</p>
           </div>
         </div>
       </div>
