@@ -30,3 +30,21 @@ body {
     font-weight: 900;
     margin-top: 0;
 }
+.products {
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    padding: 3rem;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+.product-card img {
+    max-width: 200px;
+}
+.product-card div {
+    display: flex;
+    gap: 10px;
+}
+.product-card div h1 {
+    font-size: 1.2rem;
+}

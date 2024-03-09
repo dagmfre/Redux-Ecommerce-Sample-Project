@@ -1,3 +1,5 @@
+import Products from "./Products";
+
 export default function Home() {
   return (
     <div className="home">
@@ -13,6 +15,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Products />
     </div>
   );
 }
