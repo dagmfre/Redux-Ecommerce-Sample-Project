@@ -1,23 +1,14 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { fetchProducts } from "./cartSlice";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart, increment } from "./cartSlice";
 
-export default function Products() {
+export default function CartProducts() {
   const dispatch = useDispatch();
-  const [products, setProducts] = useState([]);
+  const cartProducts = useSelector((state) => state.cart.cartProducts);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("https://fakestoreapi.com/products");
-        setProducts(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchProducts();
+    dispatch(fetchProducts())
   }, []);
 
   const handleClick = (item) => {
@@ -27,7 +18,7 @@ export default function Products() {
 
   return (
     <div className="products">
-      {products.map((product) => (
+      {cartProducts.map((product) => (
         <div key={product.id} className="product-card">
           <img src={product.image} alt="" />
           <h1>{product.title}</h1>

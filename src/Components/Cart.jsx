@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeFromCart, clearCart } from "./cartSlice";
+import { removeFromCart } from "./cartSlice";
 
 export default function Cart() {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.cart.products);
+  const cartProducts = useSelector((state) => state.cart.cartProducts);
   const handleClick = (item) => {
     dispatch(removeFromCart(item));
   };
 
-  return products.map((product) => (
+  return cartProducts.map((product) => (
     <div className="products">
       <div key={product.id} className="product-card">
         <img src={product.image} alt="" />
