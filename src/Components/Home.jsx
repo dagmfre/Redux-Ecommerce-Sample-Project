@@ -1,4 +1,4 @@
-import CartProducts from "./CartProducts";
+import Products from "./Products";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <CartProducts />
+      <Products />
     </div>
   );
 }

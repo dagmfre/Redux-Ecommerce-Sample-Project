@@ -27,7 +27,7 @@ const cartSlice = createSlice({
       state.isLoading = true;
     },
     fetchProductsSuccess: (state, action) => {
-      state.products = action.payload;
+      state.products.push(action.payload);
       state.isLoading = false;
     },
     fetchProductsFailure: (state, action) => {
